@@ -125,70 +125,70 @@ function PlantDetailScreen() {
         </MockIcon>
       }
     >
-        <div className="relative h-[258px] shrink-0 overflow-hidden rounded-[18px] bg-surface-container-high">
-          <Image
-            src={BOTANICAL_IMAGES.monstera}
-            alt=""
-            fill
-            sizes="280px"
-            className="object-cover object-center"
-          />
-          <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-[14px] bg-surface-container-lowest px-2.5 py-2 shadow-[0_4px_14px_rgba(22,56,40,0.1)]">
-            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant">
-              <StatusLeafIcon />
-            </span>
-            <span className="flex flex-col leading-none">
-              <span className="text-[7px] font-bold tracking-[0.14em] text-on-surface-variant">
-                STATUS
-              </span>
-              <span className="mt-0.5 text-[11px] font-medium text-on-surface">STABLE</span>
-            </span>
-          </div>
-        </div>
-
-        <div className="flex shrink-0 flex-col gap-2">
-          <span className="inline-flex w-fit items-center gap-2 rounded-pill bg-(--secondary-fixed) py-1.5 pl-3 pr-3.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden />
-            <span className="text-[9px] font-bold tracking-[0.16em] text-secondary">
-              AROID FAMILY
-            </span>
+      <div className="relative h-[258px] shrink-0 overflow-hidden rounded-[18px] bg-surface-container-high">
+        <Image
+          src={BOTANICAL_IMAGES.monstera}
+          alt=""
+          fill
+          sizes="280px"
+          className="object-cover object-center"
+        />
+        <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-[14px] bg-surface-container-lowest px-2.5 py-2 shadow-[0_4px_14px_rgba(22,56,40,0.1)]">
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant">
+            <StatusLeafIcon />
           </span>
-          <p className="m-0 font-serif text-[22px] font-bold leading-[1.05] text-primary">
-            Monstera
-          </p>
-          <p className="m-0 font-serif text-[11px] italic leading-snug text-on-surface-variant">
-            Swiss Cheese
-          </p>
-        </div>
-
-        <div className="flex shrink-0 flex-col gap-3">
-          <span className="flex items-center justify-center gap-2 rounded-pill bg-primary py-3 text-[11px] font-bold text-on-primary">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0Z" />
-            </svg>
-            Water Now
-          </span>
-          <span className="flex items-center justify-center gap-2 rounded-pill border border-outline-variant bg-surface-container-lowest py-3 text-[11px] font-bold text-primary">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path
-                d="M12 5v14M5 12h14"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-            Add Log
+          <span className="flex flex-col leading-none">
+            <span className="text-[7px] font-bold tracking-[0.14em] text-on-surface-variant">
+              STATUS
+            </span>
+            <span className="mt-0.5 text-[11px] font-medium text-on-surface">STABLE</span>
           </span>
         </div>
+      </div>
 
-        <div className="shrink-0 overflow-hidden rounded-[18px] bg-surface-container-low px-4 py-3">
-          <p className="m-0 font-serif text-[14px] font-bold leading-snug text-primary">
-            More history needed
-          </p>
-          <p className="mt-2 m-0 text-[10px] leading-[1.55] text-on-surface-variant">
-            This insight needs additional care logs or photos before it can offer a thoughtful read.
-          </p>
-        </div>
+      <div className="flex shrink-0 flex-col gap-2">
+        <span className="inline-flex w-fit items-center gap-2 rounded-pill bg-(--secondary-fixed) py-1.5 pl-3 pr-3.5">
+          <span className="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden />
+          <span className="text-[9px] font-bold tracking-[0.16em] text-secondary">
+            AROID FAMILY
+          </span>
+        </span>
+        <p className="m-0 font-serif text-[22px] font-bold leading-[1.05] text-primary">
+          Monstera
+        </p>
+        <p className="m-0 font-serif text-[11px] italic leading-snug text-on-surface-variant">
+          Swiss Cheese
+        </p>
+      </div>
+
+      <div className="flex shrink-0 flex-col gap-3">
+        <span className="flex items-center justify-center gap-2 rounded-pill bg-primary py-3 text-[11px] font-bold text-on-primary">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0Z" />
+          </svg>
+          Water Now
+        </span>
+        <span className="flex items-center justify-center gap-2 rounded-pill border border-outline-variant bg-surface-container-lowest py-3 text-[11px] font-bold text-primary">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path
+              d="M12 5v14M5 12h14"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          Add Log
+        </span>
+      </div>
+
+      <div className="shrink-0 overflow-hidden rounded-[18px] bg-surface-container-low px-4 py-3">
+        <p className="m-0 font-serif text-[14px] font-bold leading-snug text-primary">
+          More history needed
+        </p>
+        <p className="mt-2 m-0 text-[10px] leading-[1.55] text-on-surface-variant">
+          This insight needs additional care logs or photos before it can offer a thoughtful read.
+        </p>
+      </div>
     </MockScreenShell>
   );
 }
@@ -513,11 +513,10 @@ function CalendarScreen() {
             ) : (
               <span
                 key={day}
-                className={`flex h-[26px] shrink-0 items-center justify-center rounded-full text-[8px] ${
-                  CARE_DAYS.has(day)
+                className={`flex h-[26px] shrink-0 items-center justify-center rounded-full text-[8px] ${CARE_DAYS.has(day)
                     ? "bg-primary font-bold text-on-primary"
                     : "text-on-surface-variant"
-                }`}
+                  }`}
               >
                 {day}
               </span>

@@ -35,11 +35,11 @@ export function ScrollReveal({
   const motionProps: HTMLMotionProps<"div"> = reduceMotion
     ? { initial: false }
     : {
-        initial: { opacity: 0, y: 20 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: revealViewport,
-        transition: { duration: REVEAL_DURATION, ease: EASE_ORGANIC, delay },
-      };
+      initial: { opacity: 0, y: 20 },
+      whileInView: { opacity: 1, y: 0 },
+      viewport: revealViewport,
+      transition: { duration: REVEAL_DURATION, ease: EASE_ORGANIC, delay },
+    };
 
   return (
     <MotionTag className={className} {...motionProps}>

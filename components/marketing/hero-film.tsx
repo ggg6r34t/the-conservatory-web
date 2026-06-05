@@ -142,14 +142,14 @@ export function HeroFilm() {
     reduceMotion
       ? { initial: false as const }
       : {
-          initial: { opacity: 0, y: 18 },
-          animate: { opacity: 1, y: 0 },
-          transition: {
-            duration: 1.05,
-            ease: EASE_ORGANIC,
-            delay: HERO_ENTER_DELAYS[index],
-          },
-        };
+        initial: { opacity: 0, y: 18 },
+        animate: { opacity: 1, y: 0 },
+        transition: {
+          duration: 1.05,
+          ease: EASE_ORGANIC,
+          delay: HERO_ENTER_DELAYS[index],
+        },
+      };
 
   return (
     <section
@@ -169,11 +169,11 @@ export function HeroFilm() {
           transition={
             showDrift
               ? {
-                  duration: 20,
-                  ease: EASE_ORGANIC,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }
+                duration: 20,
+                ease: EASE_ORGANIC,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }
               : { duration: 0 }
           }
         >
