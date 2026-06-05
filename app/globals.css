@@ -237,7 +237,7 @@ body {
 }
 
 .skip-link {
-  position: absolute;
+  position: fixed;
   left: -9999px;
   top: auto;
   z-index: 100;
@@ -251,8 +251,16 @@ body {
 }
 
 .skip-link:focus {
+  outline: none;
+}
+
+.skip-link:focus:not(:focus-visible) {
+  left: -9999px;
+}
+
+.skip-link:focus-visible {
   left: var(--space-page);
-  top: var(--space-md);
+  top: clamp(5rem, 12vh, 6.5rem);
 }
 
 /* Typography utilities */

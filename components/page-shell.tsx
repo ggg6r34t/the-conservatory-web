@@ -13,7 +13,7 @@ export function PageShell({
   return (
     <>
       <a href="#main" className="skip-link">
-        Skip to main content
+        Skip to content
       </a>
       <SiteHeader />
       <main

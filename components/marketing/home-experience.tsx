@@ -13,8 +13,8 @@ import { SiteFooter } from "@/components/site-footer";
 export function HomeExperience() {
   return (
     <>
-      <a href="#story" className="skip-link">
-        Skip to main content
+      <a href="#main" className="skip-link">
+        Skip to content
       </a>
       <CinematicHeader />
       <main id="main" aria-label="The Conservatory story">
