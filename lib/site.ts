@@ -5,7 +5,10 @@ export const SITE_URL = "https://theconservatory.garden";
 export const SITE_TAGLINE =
   "Preserve the story of every plant—care, growth, memory, and a living archive.";
 
-export const LEGAL_LAST_UPDATED = "June 2, 2026";
+export const LEGAL_LAST_UPDATED = "June 4, 2026";
+
+/** ISO 8601 date paired with LEGAL_LAST_UPDATED for machine-readable markup */
+export const LEGAL_LAST_UPDATED_ISO = "2026-06-04";
 
 /** Web contact addresses (marketing domain). Content aligned with mobile legal copy. */
 export const LEGAL_CONTACT = {
@@ -36,8 +39,12 @@ export const FOOTER_APP_LINKS = [
   { href: "/#showcase", label: "App" },
 ] as const;
 
-export const FOOTER_LINKS = [
+export const FOOTER_LEGAL_LINKS = [
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
   { href: "/support", label: "Support" },
+  { href: "/account-deletion", label: "Account Deletion" },
 ] as const;
+
+/** @deprecated Use FOOTER_LEGAL_LINKS */
+export const FOOTER_LINKS = FOOTER_LEGAL_LINKS;

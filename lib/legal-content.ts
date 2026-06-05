@@ -42,11 +42,12 @@ const privacySecuritySections: LegalSection[] = [
     ],
   },
   {
-    eyebrow: "ENCRYPTION",
-    title: "In transit and at rest",
+    eyebrow: "SECURITY",
+    title: "How we protect information",
     paragraphs: [
       "Communication with Supabase, RevenueCat, and analytics services uses encrypted HTTPS/TLS.",
       "Device storage benefits from operating-system protections available on your phone or tablet. We do not implement a separate user-managed encryption passphrase for your collection.",
+      "No security program prevents all unauthorized access, device loss, or user error. Protect your device passcode, store account credentials, and maintain your own export copies for important records.",
     ],
   },
   {
@@ -73,17 +74,11 @@ const privacySecuritySections: LegalSection[] = [
     ],
   },
   {
-    eyebrow: "TELEMETRY",
-    title: "Product analytics",
+    eyebrow: "ANALYTICS",
+    title: "Product analytics and diagnostics",
     paragraphs: [
       "In production builds with PostHog configured, limited product analytics may be collected to understand feature usage and reliability. Analytics do not include the contents of your care notes or photos.",
-    ],
-  },
-  {
-    eyebrow: "SECURITY LIMITS",
-    title: "What we cannot guarantee",
-    paragraphs: [
-      "No security program prevents all unauthorized access, device loss, or user error. Protect your device passcode, store account credentials, and maintain your own export copies for important records.",
+      "Diagnostic information such as sync queue status or error summaries may be shown in the app to help you understand backup and sync outcomes.",
     ],
   },
 ];
@@ -314,6 +309,15 @@ export const privacyPolicyDocument: LegalDocument = {
     "The Conservatory is a local-first plant care app. Most collection data lives on your device first. When you sign in and enable cloud features, selected data may sync to our backend so you can restore it across sessions or devices.",
   sections: [
     {
+      eyebrow: "WHO WE ARE",
+      title: "Controller and contact",
+      paragraphs: [
+        "The Conservatory is a plant care journal published by Northfold studio.",
+        "This Privacy Policy describes how we handle information when you use The Conservatory mobile app and this website.",
+        `Privacy questions and data rights requests: ${privacyEmail}.`,
+      ],
+    },
+    {
       eyebrow: "DATA WE COLLECT",
       title: "Information you provide",
       paragraphs: [
@@ -340,12 +344,22 @@ export const privacyPolicyDocument: LegalDocument = {
       ],
     },
     {
-      eyebrow: "AI PROCESSING",
-      title: "When cloud assistance is used",
+      eyebrow: "PHOTOS AND MEDIA",
+      title: "Local files and cloud backup",
       paragraphs: [
+        "Plant photos and progress images are stored in the app sandbox on your device. Other apps cannot access these files without device-level compromise.",
+        "Premium subscribers may upload photos to Supabase Storage when sync runs successfully. Free accounts may keep photos on device only.",
+        "Backup and sync status in the app reflects actual outcomes—we do not claim cloud backup completeness when uploads are deferred, offline, or unavailable.",
+      ],
+    },
+    {
+      eyebrow: "AI PROCESSING",
+      title: "Automated outputs and limitations",
+      paragraphs: [
+        "The app may provide plant health insights, dashboard editorials, journal summaries, archive curation suggestions, species identification suggestions, care log refinements, and reminder optimization.",
         "Many AI features run locally on your device from your care history. When Premium and cloud AI are enabled, selected plant metadata, care notes, photo references, and locally generated summaries may be sent to our Supabase edge functions for processing.",
         "The app does not currently send your data to third-party large language model providers such as OpenAI or Anthropic. Cloud AI responses may use prepared fallbacks or server-side logic configured for the service.",
-        "See the AI Disclosure Policy in the app for limitations and your responsibilities.",
+        "AI outputs may be inaccurate, incomplete, or unsuitable for your plant or environment. They are informational only—not professional horticultural, agricultural, medical, or legal advice.",
       ],
     },
     {
@@ -428,6 +442,86 @@ export const privacyPolicyDocument: LegalDocument = {
   ],
 };
 
+export const accountDeletionPolicyDocument: LegalDocument = {
+  title: "Delete your The Conservatory account",
+  subtitle: "Account and data removal",
+  description:
+    "How to delete your Conservatory account in the app or by email, what data is removed, what may remain, and how subscriptions are affected.",
+  prefaceLabel: "ACCOUNT DELETION",
+  prefaceTitle: "Public deletion instructions",
+  prefaceBody:
+    "You can delete your account without signing in to this website. Use the in-app flow when possible, or email us if you no longer have access to the app. This page is provided for App Store, Google Play, and privacy compliance.",
+  sections: [
+    {
+      eyebrow: "IN THE APP",
+      title: "Delete from Privacy & Security",
+      paragraphs: [
+        "Open Profile → Privacy & Security → Delete Account. Confirm the destructive action in the dialog.",
+        "When cloud sign-in is configured, the app invokes our delete-account service, removes your Supabase Auth user, clears local collection data on the device, and signs you out.",
+        "Account deletion begins immediately when you confirm. Cloud deletion is typically completed within minutes.",
+      ],
+    },
+    {
+      eyebrow: "BY EMAIL",
+      title: "If you cannot access the app",
+      paragraphs: [
+        `Email ${privacyEmail} from the address associated with your account.`,
+        'Use the subject line "Data deletion request."',
+        "Include the email address on your account, the platform you used (iOS or Android), and whether you still have an active Premium subscription.",
+        "We may ask you to verify your identity before completing the request. Email requests are typically processed within 30 days, often sooner.",
+      ],
+    },
+    {
+      eyebrow: "WHAT IS DELETED",
+      title: "Data removed with your account",
+      paragraphs: [
+        "When deletion succeeds, the following are removed as applicable: account profile (email, display name, avatar), plants and species records, care logs and tags, reminders, photos metadata, graveyard and memorial records, specimen tags, archive curation data, user preferences, and synced cloud database rows tied to your user ID.",
+        "Local SQLite collection tables, sync queue entries, session tokens, and local profile rows on the device are cleared as part of account deletion.",
+        "Local photo files in the app sandbox are removed where applicable as part of clearing local collection data.",
+      ],
+    },
+    {
+      eyebrow: "WHAT MAY REMAIN",
+      title: "Records we do not control",
+      paragraphs: [
+        "Apple App Store and Google Play purchase and billing history are retained by Apple or Google according to their policies.",
+        "RevenueCat may retain transaction and entitlement records according to its retention schedules.",
+        "PostHog analytics events, if collected, may persist in anonymized or aggregated form according to our analytics configuration.",
+        "Provider backups or replication may retain deleted cloud data for up to approximately 30 days before automatic purge.",
+        "We may retain limited security, fraud-prevention, or legal records where required by law.",
+      ],
+    },
+    {
+      eyebrow: "SUBSCRIPTIONS",
+      title: "Cancel billing separately",
+      paragraphs: [
+        "Deleting your account or uninstalling the app does not automatically cancel an active App Store or Google Play subscription.",
+        "iOS: open Settings → your name → Subscriptions → The Conservatory → Cancel Subscription.",
+        "Android: open Google Play → Payments & subscriptions → Subscriptions → The Conservatory → Cancel.",
+        "Refunds are handled by Apple or Google according to their policies—not by us directly.",
+      ],
+    },
+    {
+      eyebrow: "CLOUD DETAILS",
+      title: "Supabase and storage",
+      paragraphs: [
+        "When Supabase is configured, our delete-account service removes your Auth user. Database rows tied to your user ID are removed through foreign-key cascade, including plants, photos metadata, care logs, reminders, preferences, and related synced tables.",
+        "Cloud photo objects in Supabase Storage may not be deleted instantly by the auth deletion flow alone. Residual storage objects, if any, are purged according to provider backup and lifecycle practices.",
+        "Development or offline builds without Supabase skip remote deletion and remove local account data and session state only.",
+      ],
+    },
+    {
+      eyebrow: "DELETION TIMING",
+      title: "Processing window",
+      paragraphs: [
+        "In-app deletion begins immediately when you confirm. Cloud auth deletion is typically completed within minutes, but provider backups or replication may retain deleted data for up to approximately 30 days before automatic purge.",
+        "Email deletion requests are typically processed within 30 days, often sooner. We may need to verify your identity first.",
+        `If deletion fails or you need confirmation, contact ${privacyEmail}.`,
+      ],
+    },
+  ],
+};
+
 export const termsOfServiceDocument: LegalDocument = {
   title: "Terms of Service",
   subtitle: "Membership & billing",
@@ -439,11 +533,36 @@ export const termsOfServiceDocument: LegalDocument = {
     "By creating an account, subscribing, or using The Conservatory, you agree to these Terms of Service, including the subscription and billing terms in Part II below. If you do not agree, do not use the app.",
   sections: [
     {
+      eyebrow: "ACCEPTANCE",
+      title: "Agreement to these terms",
+      paragraphs: [
+        "By downloading, installing, creating an account, subscribing, or using The Conservatory, you agree to these Terms of Service and our Privacy Policy.",
+        "If you do not agree, do not use the app.",
+      ],
+    },
+    {
       eyebrow: "ELIGIBILITY",
       title: "Who may use the service",
       paragraphs: [
         "You must be at least 13 years old, or the minimum age required in your jurisdiction, to use The Conservatory. If you are under the age of majority where you live, you may use the app only with permission from a parent or legal guardian who accepts these terms on your behalf.",
         "You are responsible for all activity under your account and for keeping your sign-in credentials secure. You agree to provide accurate account information and to use the app only in lawful ways.",
+      ],
+    },
+    {
+      eyebrow: "ACCOUNTS",
+      title: "Security and responsibility",
+      paragraphs: [
+        "You are responsible for activity under your account and for keeping your sign-in credentials secure.",
+        `Notify us promptly at ${supportEmail} if you believe your account has been accessed without authorization.`,
+        "We may suspend or terminate accounts that violate these terms or pose a security risk.",
+      ],
+    },
+    {
+      eyebrow: "USE OF THE APP",
+      title: "Plant care journal",
+      paragraphs: [
+        "The Conservatory helps you record plant care, growth, photos, reminders, and memorial records. It is a personal journaling tool—not a guarantee of horticultural outcomes.",
+        "Care reminders, schedules, and insights are aids for reflection. You remain responsible for observing your plants and making care decisions appropriate to your environment.",
       ],
     },
     {
@@ -466,8 +585,26 @@ export const termsOfServiceDocument: LegalDocument = {
       eyebrow: "AI FEATURES",
       title: "Informational tools only",
       paragraphs: [
-        "The Conservatory may provide AI-assisted insights, summaries, species suggestions, and related features. These outputs are generated from your collection data and, where enabled, cloud processing. They are provided for informational purposes only.",
-        "AI features do not provide professional horticultural, agricultural, medical, or legal advice. You remain responsible for plant care decisions. See the AI Disclosure Policy in the app for details.",
+        "The Conservatory may provide AI-assisted insights, summaries, species suggestions, archive curation, and related features. These outputs are generated from your collection data and, where enabled, cloud processing.",
+        "AI outputs may be incomplete, outdated, or inaccurate. They do not provide professional horticultural, agricultural, medical, or legal advice and do not guarantee healthier plants or prevention of loss.",
+        "You remain solely responsible for plant care decisions. See the AI Disclosure Policy in the app for additional limitations.",
+      ],
+    },
+    {
+      eyebrow: "DATA RIGHTS",
+      title: "Export and account deletion",
+      paragraphs: [
+        "You may export collection data from Profile → Data & Backup or Privacy & Security. Export scope depends on your subscription tier as described in the Privacy Policy.",
+        "You may delete your account from Profile → Privacy & Security → Delete Account, or request deletion by email as described on our Account & data deletion page.",
+        "Deleting your account does not automatically cancel App Store or Google Play subscriptions.",
+      ],
+    },
+    {
+      eyebrow: "THIRD-PARTY SERVICES",
+      title: "Stores and providers",
+      paragraphs: [
+        "The app integrates with Apple App Store, Google Play, RevenueCat, Supabase, and PostHog where configured. Your use of those services is also subject to their terms and privacy policies.",
+        "We are not responsible for outages, policy changes, or billing actions taken by third-party platforms.",
       ],
     },
     {
@@ -517,11 +654,27 @@ export const termsOfServiceDocument: LegalDocument = {
     },
     ...subscriptionTermsSections,
     {
+      eyebrow: "PLATFORM STORES",
+      title: "Apple App Store and Google Play",
+      paragraphs: [
+        "Premium subscriptions are sold through the Apple App Store or Google Play. Your purchase relationship for billing, renewals, refunds, and subscription management is with the platform store—not directly with us.",
+        "Apple Media Services Terms and Google Play Terms of Service apply to store transactions. We receive entitlement status from RevenueCat but do not process payment card data.",
+      ],
+    },
+    {
+      eyebrow: "CHANGES",
+      title: "Updates to these terms",
+      paragraphs: [
+        "We may update these Terms of Service from time to time. Material changes will be reflected in the app and by updating the effective date on this page.",
+        `Questions about these terms may be sent to ${legalEmail}.`,
+      ],
+    },
+    {
       eyebrow: "GOVERNING LAW",
-      title: "Disputes and contact",
+      title: "Disputes",
       paragraphs: [
         "These terms are governed by the laws of the State of Delaware, United States, excluding conflict-of-law rules, except where mandatory consumer protection laws in your country of residence provide otherwise.",
-        `Questions about these terms may be sent to ${legalEmail}.`,
+        `Legal contact: ${legalEmail}.`,
       ],
     },
   ],

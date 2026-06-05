@@ -1,6 +1,4 @@
-import { LegalContent } from "@/components/legal-content";
-import { PageShell } from "@/components/page-shell";
-import { EditorialPanel } from "@/components/editorial-panel";
+import { LegalDocumentView } from "@/components/legal/legal-document";
 import { createPageMetadata } from "@/lib/metadata";
 import { termsOfServiceDocument } from "@/lib/legal-content";
 import { LEGAL_CONTACT } from "@/lib/site";
@@ -11,22 +9,23 @@ export const metadata = createPageMetadata({
   path: "/terms",
 });
 
+const relatedLinks = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/account-deletion", label: "Account & data deletion" },
+  { href: "/support", label: "Support" },
+] as const;
+
 export default function TermsPage() {
   return (
-    <PageShell mainLabel="Terms of Service">
-      <LegalContent document={termsOfServiceDocument} />
-      <EditorialPanel variant="high" className="mt-16">
-        <h2 className="type-title m-0">Contact</h2>
-        <p className="type-body mt-4 m-0">
-          Legal questions:{" "}
-          <a
-            href={`mailto:${LEGAL_CONTACT.legalEmail}`}
-            className="font-bold text-primary no-underline hover:underline"
-          >
-            {LEGAL_CONTACT.legalEmail}
-          </a>
-        </p>
-      </EditorialPanel>
-    </PageShell>
+    <LegalDocumentView
+      document={termsOfServiceDocument}
+      contact={{
+        title: "Legal contact",
+        description: "Questions about these Terms of Service.",
+        email: LEGAL_CONTACT.legalEmail,
+        emailLabel: "Legal",
+      }}
+      relatedLinks={relatedLinks}
+    />
   );
 }

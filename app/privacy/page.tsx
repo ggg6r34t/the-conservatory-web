@@ -1,6 +1,4 @@
-import { LegalContent } from "@/components/legal-content";
-import { PageShell } from "@/components/page-shell";
-import { EditorialPanel } from "@/components/editorial-panel";
+import { LegalDocumentView } from "@/components/legal/legal-document";
 import { createPageMetadata } from "@/lib/metadata";
 import { privacyPolicyDocument } from "@/lib/legal-content";
 import { LEGAL_CONTACT } from "@/lib/site";
@@ -11,22 +9,23 @@ export const metadata = createPageMetadata({
   path: "/privacy",
 });
 
+const relatedLinks = [
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/account-deletion", label: "Account & data deletion" },
+  { href: "/support", label: "Support" },
+] as const;
+
 export default function PrivacyPage() {
   return (
-    <PageShell mainLabel="Privacy Policy">
-      <LegalContent document={privacyPolicyDocument} />
-      <EditorialPanel variant="high" className="mt-16">
-        <h2 className="type-title m-0">Contact</h2>
-        <p className="type-body mt-4 m-0">
-          Privacy questions:{" "}
-          <a
-            href={`mailto:${LEGAL_CONTACT.privacyEmail}`}
-            className="font-bold text-primary no-underline hover:underline"
-          >
-            {LEGAL_CONTACT.privacyEmail}
-          </a>
-        </p>
-      </EditorialPanel>
-    </PageShell>
+    <LegalDocumentView
+      document={privacyPolicyDocument}
+      contact={{
+        title: "Privacy contact",
+        description: "Questions about this policy or your data rights.",
+        email: LEGAL_CONTACT.privacyEmail,
+        emailLabel: "Privacy",
+      }}
+      relatedLinks={relatedLinks}
+    />
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandLockup } from "@/components/brand-lockup";
-import { FOOTER_APP_LINKS, FOOTER_LINKS, SITE_NAME } from "@/lib/site";
+import { FOOTER_APP_LINKS, FOOTER_LEGAL_LINKS, SITE_NAME } from "@/lib/site";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <BrandLockup tone="onLight" textClassName="type-title" />
             <p className="type-body mt-4 m-0">
-              A <span className="font-bold text-primary">Northfold</span> app
+              A <span className="font-bold text-primary">Northfold</span> studio app
             </p>
             <p className="type-small mt-3 m-0">© {year} {SITE_NAME}</p>
           </div>
@@ -24,7 +24,7 @@ export function SiteFooter() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="footer-column-link text-[var(--text-body)] font-bold text-primary no-underline hover:underline"
+                      className="footer-column-link text-[var(--text-body)] font-bold text-primary no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {item.label}
                     </Link>
@@ -35,11 +35,11 @@ export function SiteFooter() {
             <nav aria-label="Company" className="footer-column">
               <p className="footer-column-label m-0">Company</p>
               <ul className="footer-column-list m-0 list-none p-0">
-                {FOOTER_LINKS.map((item) => (
+                {FOOTER_LEGAL_LINKS.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="footer-column-link text-[var(--text-body)] font-bold text-primary no-underline hover:underline"
+                      className="footer-column-link text-[var(--text-body)] font-bold text-primary no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {item.label}
                     </Link>

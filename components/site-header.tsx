@@ -9,7 +9,7 @@ export function SiteHeader() {
         <Link
           href="/"
           aria-label="The Conservatory home"
-          className="text-primary no-underline hover:opacity-90"
+          className="text-primary no-underline hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <BrandLockup
             tone="onLight"
@@ -22,7 +22,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex rounded-[var(--radius-pill)] px-3.5 py-2 text-[var(--text-small)] font-bold text-on-surface-variant no-underline transition-colors hover:bg-surface-container-high hover:text-on-surface"
+                  className="inline-flex rounded-[var(--radius-pill)] px-3.5 py-2 text-[var(--text-small)] font-bold text-on-surface-variant no-underline transition-colors hover:bg-surface-container-high hover:text-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   {item.label}
                 </Link>
