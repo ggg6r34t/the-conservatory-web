@@ -114,6 +114,6 @@ export const BOTANICAL_IMAGES = {
 export const HERO_FILM = {
   poster: "/images/lush-green-monstera-deliciosa.png",
   posterWebp: "/images/hero-poster.webp",
-  videoMp4: "/videos/a-year-in-the-conservatory.mp4",
-  videoWebm: "/videos/a-year-in-the-conservatory.webm",
+  videoMp4: "/videos/a-premium-cinematic-hero-video-of-the-conservatory.mp4",
+  videoWebm: "/videos/a-premium-cinematic-hero-video-of-the-conservatory.webm",
 } as const;

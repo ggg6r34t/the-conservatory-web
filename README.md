@@ -51,7 +51,7 @@ Until then, store buttons link to `#download` on the home page.
 ## Hero media
 
 - Poster: `public/images/hero-poster.webp` (fallback PNG in `lib/narrative-content.ts`)
-- Film: `public/videos/a-year-in-the-conservatory.mp4` (optional `.webm` — see `public/videos/README.md`)
+- Film: `public/videos/a-premium-cinematic-hero-video-of-the-conservatory.mp4` (optional `.webm` — see `public/videos/README.md`)
 
 ## Deploy
 

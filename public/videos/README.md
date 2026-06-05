@@ -4,15 +4,15 @@ Place cinematic demo files here:
 
 | File | Purpose |
 |------|---------|
-| `a-year-in-the-conservatory.mp4` | H.264 fallback (required) |
-| `a-year-in-the-conservatory.webm` | VP9 — smaller for Chrome/Firefox (optional, auto-detected) |
+| `a-premium-cinematic-hero-video-of-the-conservatory.mp4` | H.264 fallback (required) |
+| `a-premium-cinematic-hero-video-of-the-conservatory.webm` | VP9 — smaller for Chrome/Firefox (optional, auto-detected) |
 
 ## Recommended specs
 
 - **Length:** 30–90s loop (shorter cuts load faster)
 - **Resolution:** 1920×1080 max
 - **MP4 size:** aim for 4–8 MB (use HandBrake or `ffmpeg -crf 28`)
-- **WebM:** `ffmpeg -i a-year-in-the-conservatory.mp4 -c:v libvpx-vp9 -crf 35 -b:v 0 a-year-in-the-conservatory.webm`
+- **WebM:** `ffmpeg -i a-premium-cinematic-hero-video-of-the-conservatory.mp4 -c:v libvpx-vp9 -crf 35 -b:v 0 a-premium-cinematic-hero-video-of-the-conservatory.webm`
 
 ## Poster (LCP)
 
