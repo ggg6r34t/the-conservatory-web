@@ -3,7 +3,7 @@ export const SITE_NAME = "The Conservatory";
 export const SITE_URL = "https://theconservatory.garden";
 
 export const SITE_TAGLINE =
-  "Preserve the story of every plant—care, growth, memory, and a living archive.";
+  "Preserve the story of every plant: care, growth, memory, and a living archive.";
 
 export const LEGAL_LAST_UPDATED = "June 4, 2026";
 

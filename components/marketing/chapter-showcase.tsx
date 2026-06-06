@@ -40,7 +40,7 @@ export function ChapterShowcase() {
           Explore the conservatory
         </h2>
         <p className="type-body-lg showcase-body mx-auto mt-8 max-w-[38rem]">
-          Product UI built from the mobile design system—faithful frames until store
+          Product UI built from the mobile design system. Faithful frames until store
           screenshots replace them.
         </p>
       </ScrollReveal>

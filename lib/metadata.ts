@@ -12,7 +12,7 @@ export function createPageMetadata({
 }): Metadata {
   const canonical = `${SITE_URL}${path === "/" ? "" : path}`;
   const fullTitle =
-    path === "/" ? `${SITE_NAME} — Plant care journal` : `${title} — ${SITE_NAME}`;
+    path === "/" ? `${SITE_NAME} | Plant care journal` : `${title} — ${SITE_NAME}`;
 
   return {
     title: fullTitle,

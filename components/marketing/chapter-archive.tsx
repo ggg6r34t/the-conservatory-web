@@ -12,7 +12,7 @@ import { CHAPTERS, BOTANICAL_IMAGES } from "@/lib/narrative-content";
 import { staggerItem } from "@/lib/motion";
 
 const galleryImages = [
-  { src: BOTANICAL_IMAGES.monstera, caption: "Monstera", years: "2024 —" },
+  { src: BOTANICAL_IMAGES.monstera, caption: "Monstera", years: "Since 2024" },
   { src: BOTANICAL_IMAGES.pothos, caption: "Pothos", years: "Window shelf" },
   { src: BOTANICAL_IMAGES.pilea, caption: "Pilea", years: "First pot" },
 ] as const;

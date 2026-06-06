@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { HERO } from "@/lib/narrative-content";
 import { SITE_NAME } from "@/lib/site";
 
-export const alt = `${SITE_NAME} — ${HERO.headline}`;
+export const alt = `${SITE_NAME}. ${HERO.headline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

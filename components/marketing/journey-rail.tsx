@@ -55,7 +55,7 @@ export function JourneyRail() {
               </Link>
               {i < JOURNEY_SECTIONS.length - 1 && (
                 <span className="font-normal text-outline-variant" aria-hidden>
-                  —
+                  ·
                 </span>
               )}
             </li>

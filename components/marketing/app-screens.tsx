@@ -242,7 +242,7 @@ function TimelineScreen() {
             />
           </div>
           <p className="m-0 shrink-0 text-[10px] leading-[1.55] text-on-surface-variant">
-            The fenestrations are opening on the newest leaf — a quiet sign after the move to
+            The fenestrations are opening on the newest leaf, a quiet sign after the move to
             the window.
           </p>
         </div>
@@ -362,7 +362,7 @@ function ArchiveScreen() {
           Every plant remembered
         </p>
         <p className="mt-2 m-0 text-[10px] leading-[1.55] text-on-surface-variant">
-          Photos, tags, and years held together — the archive grows with your care.
+          Photos, tags, and years held together. The archive grows with your care.
         </p>
       </div>
     </MockScreenShell>
@@ -554,7 +554,7 @@ function CalendarScreen() {
           Care rhythm
         </p>
         <p className="mt-2 m-0 text-[10px] leading-[1.55] text-on-surface-variant">
-          Upcoming watering, feeding, and gentle care — derived from your plants and reminders.
+          Upcoming watering, feeding, and gentle care, derived from your plants and reminders.
         </p>
       </div>
     </MockScreenShell>

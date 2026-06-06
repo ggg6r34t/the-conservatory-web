@@ -67,7 +67,7 @@ export function ChapterPremium() {
           <div className="invitation-card__divider" aria-hidden />
 
           <p className="invitation-postscript m-0 text-center">
-            Pricing appears in the app before you subscribe. No pressure—only depth when
+            Pricing appears in the app before you subscribe. No pressure, only depth when
             you are ready.
           </p>
         </article>
